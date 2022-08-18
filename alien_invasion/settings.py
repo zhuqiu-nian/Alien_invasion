@@ -19,8 +19,22 @@ class Settings:
 
         # 外星人设置
         self.alien_speed = 0.4
-        self.fleet_drop_speed = 10
+        self.fleet_drop_speed = 12
         self.fleet_direction = 1
+
+        # boss设置
+        self.alien_boss_hp = 25  # 修改hp还要在alien_boss的recover方法里修改
+        self.boss_bullet_speed = 0.5
+        self.boss_bullet_r = 2
+        self.boss_bullet_color = (231, 66, 52)
+        # boss是否开火的计数
+        self.boss_move = 0
+        # boss开火标志
+        self.boss_fire = True
+        # boss当前发射子弹计数
+        self.boss_bullets = 0
+        # 允许boss一次性最多发射的子弹数
+        self.boss_max_bullets = 10
 
         # 加快游戏节奏
         self.speedup_scale = 1.3
@@ -36,7 +50,7 @@ class Settings:
         self.alien_speed = 0.4
         self.fleet_direction = 1
         # 计分
-        self.alien_points = 50
+        self.alien_points = 150
 
     def increase_speed(self):
         """提高速度设置，提高外星人分数设置"""

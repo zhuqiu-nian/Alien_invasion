@@ -13,3 +13,11 @@ class GameStats:
         self.ship_left = self.settings.ship_limit
         self.score = 0
         self.level = 1
+        self.boos_set = False
+
+    def check_level(self):
+        """对游戏等级做出的响应"""
+        if self.level % 3 == 0:
+            self.boos_set = True
+        else:
+            self.boos_set = False
